@@ -1,8 +1,10 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   --wine: #722F37;
   --lightgrey: #D1D5DB;
   --charcoal: #1F1F1F;
@@ -11,22 +13,32 @@
 body {
   @apply bg-white text-charcoal;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  @apply overflow-x-hidden; /* Prevent horizontal scrolling */
+}
+
+main {
+  @apply min-h-screen w-full; /* Ensure full height and width */
+  @apply px-4; /* Add padding for content */
 }
 
 /* Glassmorphism */
 .glass {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 /* Wine button */
 .btn-wine {
-  background: linear-gradient(90deg, rgba(114,47,55,1), rgba(131,36,48,1));
+  background: linear-gradient(90deg, rgba(114, 47, 55, 1), rgba(131, 36, 48, 1));
   color: white;
   padding: 0.6rem 1rem;
   border-radius: 0.6rem;
   font-weight: 600;
-  box-shadow: 0 6px 18px rgba(114,47,55,0.18);
+}
+
+/* Constrain content width */
+.max-w-container {
+  @apply max-w-6xl mx-auto; /* Center content and limit width */
 }

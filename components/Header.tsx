@@ -7,7 +7,8 @@ export default function Header(){
   return (
     <header className="bg-white/80 backdrop-blur-md sticky top-0 z-40 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/"><a className="flex items-center gap-3"><img src="/logo.svg" alt="Adamstown logo" style={{height:48}}/></a></Link>
+        {/* <Link href="/"><a className="flex items-center gap-3"><img src="/logo.svg" alt="Adamstown logo" style={{height:48}}/></a></Link> */}
+        <Link legacyBehavior href="/"><a className="flex items-center gap-3"><img src="/logo.svg" alt="Adamstown logo" style={{height:48}}/></a></Link>
         <nav className="hidden md:flex gap-6 items-center text-sm">
           <Link href="/about">About</Link>
           <Link href="/teams">Teams</Link>
